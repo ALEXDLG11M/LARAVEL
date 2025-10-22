@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
+use App\Models\Question;
 
 class DatabaseSeeder extends Seeder
 {
@@ -17,9 +18,16 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         // User::factory(10)->create();
-		User::updateOrCreate(
-			['email' => 'demo@example.com'],
-			['name' => 'Usuario Demo', 'password' => Hash::make('password')]
-		);
+		$a = User::updateOrCreate(
+            ['email' => 'demo@example.com'],
+            ['name' => 'Usuario Demo', 'password' => Hash::make('password')]
+        );
+        $b = User::updateOrCreate(
+            ['email' => 'otra@example.com'],
+            ['name' => 'Otra Persona', 'password' => Hash::make('password')]
+        );
+
+        Question::factory()->count(2)->create(['user_id' => $a->id]);
+		Question::factory()->count(1)->create(['user_id' => $b->id]);
     }
 }

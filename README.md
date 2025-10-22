@@ -59,3 +59,37 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+## Proyecto Q&A — Persona A (Backend)
+
+### Requisitos
+- PHP 8.2+
+- Composer
+- MySQL/MariaDB
+- Node 18+ (Breeze)
+
+### Setup
+1. `cp .env.example .env` y configura BD.
+2. `composer install`
+3. `php artisan key:generate`
+4. `composer require laravel/breeze --dev && php artisan breeze:install blade`
+5. `npm install && npm run build`
+6. `php artisan migrate --seed`
+7. Servidor local:
+   - `php -S 127.0.0.1:8888 -t public` **(recomendado en Windows)**  
+     o `php artisan serve` si te funciona.
+
+### Cuentas demo
+- `demo@example.com` / `password`
+- `otra@example.com` / `password`
+
+### Ramas de trabajo (A)
+- `feature/auth`: login/registro/logout (Breeze).
+- `feature/questions-core`: modelo, migración, requests, policy, controlador y rutas.
+
+### Criterios de aceptación (A)
+- Rutas sensibles con `auth`.
+- Crear pregunta validada y asociada al usuario; redirige al detalle con flash.
+- Editar/eliminar solo autor (Policy).
+- Tests de creación/autorización pasando.
