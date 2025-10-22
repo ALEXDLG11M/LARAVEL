@@ -93,3 +93,26 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - Crear pregunta validada y asociada al usuario; redirige al detalle con flash.
 - Editar/eliminar solo autor (Policy).
 - Tests de creación/autorización pasando.
+
+# Clonar
+git clone https://github.com/ALEXDLG11M/LARAVEL.git
+cd LARAVEL
+
+# Instalar dependencias
+composer install
+cp .env.example .env
+php artisan key:generate
+
+# Configurar .env (DB local) y luego:
+php artisan migrate:fresh --seed
+
+# Compilar Breeze
+npm install
+npm run build
+
+# En Windows: servidor local (recomendado)
+php -S 127.0.0.1:8888 -t public
+
+# Credenciales demo
+demo@example.com / password
+otra@example.com / password
