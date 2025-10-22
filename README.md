@@ -117,12 +117,14 @@ php -S 127.0.0.1:8888 -t public
 demo@example.com / password
 otra@example.com / password
 
+> Ver [docs/MENSAJE_PERSONA_B.md](docs/MENSAJE_PERSONA_B.md) para tareas de Persona B.
+
 ## URL pública (producción)
-- (pendiente por Persona B) 👉 https://<tu-app>.onrender.com
+- (pendiente por Persona B) -> https://<tu-app>.onrender.com
 
 ---
 
-## 📋 Checklist para el PDF de entrega (Persona B)
+##  Checklist para el PDF de entrega (Persona B)
 
 **Debe incluir:**
 - [ ] Portada con nombres y link al repositorio
