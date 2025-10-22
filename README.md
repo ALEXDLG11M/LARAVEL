@@ -116,3 +116,6 @@ php -S 127.0.0.1:8888 -t public
 # Credenciales demo
 demo@example.com / password
 otra@example.com / password
+
+## URL pública (producción)
+- (pendiente por Persona B) 👉 https://<tu-app>.onrender.com
