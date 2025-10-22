@@ -119,3 +119,19 @@ otra@example.com / password
 
 ## URL pública (producción)
 - (pendiente por Persona B) 👉 https://<tu-app>.onrender.com
+
+---
+
+## 📋 Checklist para el PDF de entrega (Persona B)
+
+**Debe incluir:**
+- [ ] Portada con nombres y link al repositorio
+- [ ] URL pública de la app (producción)
+- [ ] Capturas:
+  - [ ] Registro de usuario (/register)
+  - [ ] Login (/login)
+  - [ ] Crear pregunta (form + confirmación)
+  - [ ] Editar pregunta (como autor)
+  - [ ] Ver detalle (título, autor, fecha, contenido)
+- [ ] Botones Editar/Eliminar visibles solo para el autor
+- [ ] (Opcional) Resultado de `php artisan test` (tests en verde)
